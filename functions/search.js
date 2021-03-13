@@ -19,6 +19,19 @@ const getRefreshToken = async () => {
   }
 };
 
+const searchArtist = async (artist) => {
+  const res = await fetch(
+    `https://api.spotify.com/v1/search?q=${artist}&type=artist`,
+    {
+      method: "GET",
+      headers: {
+        Authorization: `Bearer ${process.env.REFRESH_TOKEN}`,
+      },
+    }
+  );
+  return res.json();
+};
+
 exports.handler = async ({ queryStringParameters }) => {
   const { artist } = queryStringParameters;
 
@@ -26,8 +39,9 @@ exports.handler = async ({ queryStringParameters }) => {
     process.env.REFRESH_TOKEN = await getRefreshToken();
   }
 
-  return {
-    statusCode: 200,
-    body: "",
-  };
+  try {
+    let res = await searchArtist(artist);
+  } catch (error) {
+    console.log(error);
+  }
 };
