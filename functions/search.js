@@ -40,7 +40,12 @@ exports.handler = async ({ queryStringParameters }) => {
   }
 
   try {
-    let res = await searchArtist(artist);
+    let result = await searchArtist(artist);
+
+    if (result.error && result.error.status === 401) {
+      process.env.REFRESH_TOKEN = await getRefreshToken();
+      result = await searchArtist(artist);
+    }
   } catch (error) {
     console.log(error);
   }
