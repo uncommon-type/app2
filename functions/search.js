@@ -21,6 +21,11 @@ const getRefreshToken = async () => {
 
 exports.handler = async ({ queryStringParameters }) => {
   const { artist } = queryStringParameters;
+
+  if (!process.env.REFRESH_TOKEN) {
+    process.env.REFRESH_TOKEN = await getRefreshToken();
+  }
+
   return {
     statusCode: 200,
     body: "",
