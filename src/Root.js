@@ -1,6 +1,7 @@
 import React from "react";
 
 import SearchBar from "./containers/SearchBar";
+import ViewSearchResults from "./containers/ViewSearchResults";
 
 const Root = () => {
   return (
