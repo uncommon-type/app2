@@ -46,6 +46,10 @@ exports.handler = async ({ queryStringParameters }) => {
       process.env.REFRESH_TOKEN = await getRefreshToken();
       result = await searchArtist(artist);
     }
+    return {
+      statusCode: 200,
+      body: JSON.stringify(result),
+    };
   } catch (error) {
     console.log(error);
   }
