@@ -8,6 +8,9 @@ const Root = () => {
       <section className="app__section">
         <SearchBar />
       </section>
+      <section className="app__section wrapper">
+        <ViewSearchResults />
+      </section>
     </main>
   );
 };
