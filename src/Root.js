@@ -1,7 +1,13 @@
 import React from "react";
 
-function Root() {
-  return <div>hello</div>;
-}
+const Root = () => {
+  return (
+    <main className="app">
+      <section className="app__section">
+        <SearchBar />
+      </section>
+    </main>
+  );
+};
 
 export default Root;
