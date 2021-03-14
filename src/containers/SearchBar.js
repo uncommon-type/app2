@@ -8,6 +8,10 @@ const SearchBar = () => {
     setInputValue("");
   };
 
+  const handleSearch = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
     <Fragment>
       <h3>Search for an Artist</h3>
