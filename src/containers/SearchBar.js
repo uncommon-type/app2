@@ -1,6 +1,7 @@
 import React, { Fragment, useState } from "react";
 
 const SearchBar = () => {
+  const [inputValue, setInputValue] = useState("");
   return (
     <Fragment>
       <h3>Search for an Artist</h3>
