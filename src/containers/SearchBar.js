@@ -14,11 +14,11 @@ const SearchBar = () => {
       <div className="section__form splitter">
         <form onSubmit={handleSearchSubmit} className="search-form">
           <input
+            value={inputValue}
             type="text"
             name="q"
             aria-label="Search"
             id="artistSearch"
-            value=""
           />
           <button type="submit">Search</button>
         </form>
