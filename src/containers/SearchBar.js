@@ -3,6 +3,11 @@ import React, { Fragment, useState } from "react";
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
 
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    setInputValue("");
+  };
+
   return (
     <Fragment>
       <h3>Search for an Artist</h3>
