@@ -15,10 +15,11 @@ const Root = () => {
         </section>
         <Switch>
           <Route exact path="/" />
-          <section className="app__section wrapper">
-            <ViewSearchResults />
-            {/* <ViewArtistDetails /> */}
-          </section>
+          <Route path="/search">
+            <section className="app__section wrapper">
+              <ViewSearchResults />
+            </section>
+          </Route>
         </Switch>
       </main>
     </Router>
