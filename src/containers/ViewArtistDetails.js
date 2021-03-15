@@ -14,6 +14,8 @@ const ViewArtistDetails = () => {
   const isSuccess = status === "success";
   const isError = status === "error";
 
+  const { id } = useParams();
+
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
