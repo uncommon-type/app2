@@ -32,8 +32,12 @@ const ViewSearchResults = () => {
           `/.netlify/functions/search?artist=${encodeURIComponent(searchTerm)}`
         );
         const data = await result.json();
+        setData(data);
+        setStatus("success");
       } catch (error) {
         console.log(error);
+        setError(error);
+        setStatus("error");
       }
     };
     searchArtists(searchTerm);
