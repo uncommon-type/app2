@@ -54,19 +54,30 @@ const ViewArtistDetails = () => {
     return <ErrorMessage error={error} />;
   }
 
-  return (
-    <div className="splitter2 gap-top">
-      <article className="artist-infogroup flow radius">
-        <div className="artist-infogroup__inner flow">
-          <div className="info stack">
-            <ArtistImage />
-            <RelatedArtistsList />
-          </div>
+  return isSuccess ? (
+    data.length > 0 ? (
+      <section className="app__section wrapper" id="main-content">
+        <div className="splitter2 gap-top">
+          <article className="artist-infogroup flow radius">
+            <div className="artist-infogroup__inner flow">
+              <div className="info stack">
+                <ArtistImage artist={data[2]} />
+                {data[1].artists.length ? (
+                  <RelatedArtistsList relatedArtists={data[1].artists} />
+                ) : null}
+              </div>
+            </div>
+          </article>
+
+          <article className="tracks-infogroup flow radius bg-primary color-light">
+            <TopTracksList tracks={data[0].tracks} />
+          </article>
         </div>
-      </article>
-      <TopTracksList />
-    </div>
-  );
+      </section>
+    ) : (
+      <ErrorMessage error={error} />
+    )
+  ) : null;
 };
 
 export default ViewArtistDetails;
