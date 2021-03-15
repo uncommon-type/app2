@@ -31,8 +31,19 @@ exports.handler = async ({ queryStringParameters }) => {
     process.env.REFRESH_TOKEN = await getRefreshToken();
   }
 
-  return {
-    statusCode: 200,
-    body: "",
-  };
+  try {
+    let fetchedInfo = await Promise.all(
+      urls.map(async (url) => {
+        const artistResponse = await fetch(url, {
+          method: "GET",
+          headers: {
+            Authorization: `Bearer ${process.env.REFRESH_TOKEN}`,
+          },
+        });
+        return artistResponse.json();
+      })
+    );
+  } catch (error) {
+    console.error(error);
+  }
 };
