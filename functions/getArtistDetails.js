@@ -19,7 +19,9 @@ const getRefreshToken = async () => {
   }
 };
 
-exports.handler = async () => {
+exports.handler = async ({ queryStringParameters }) => {
+  const { id } = queryStringParameters;
+
   return {
     statusCode: 200,
     body: "",
