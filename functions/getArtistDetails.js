@@ -58,6 +58,11 @@ exports.handler = async ({ queryStringParameters }) => {
         })
       );
     }
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(fetchedInfo),
+    };
   } catch (error) {
     console.error(error);
   }
