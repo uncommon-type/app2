@@ -12,18 +12,20 @@ const SearchResultsTableRow = ({
 }) => (
   <tr>
     <th scope="row">
-      <div className="avatar">
-        <figure className="avatar__img aspect-ratio-square">
-          <img
-            src={
-              (images && images[0] && images[0].url) ||
-              "https://placehold.it/160x160"
-            }
-            alt={name}
-          />
-        </figure>
-        <p>{name}</p>
-      </div>
+      <Link to={`/artist/${id}`}>
+        <div className="avatar">
+          <figure className="avatar__img aspect-ratio-square">
+            <img
+              src={
+                (images && images[0] && images[0].url) ||
+                "https://placehold.it/160x160"
+              }
+              alt={name}
+            />
+          </figure>
+          <p>{name}</p>
+        </div>
+      </Link>
     </th>
     <td>
       <span className="pill radius bg-tertiary color-light">
