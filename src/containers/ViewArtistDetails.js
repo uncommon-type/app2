@@ -6,6 +6,7 @@ import ArtistImage from "../components/ArtistImage";
 const ViewArtistDetails = () => {
   const [data, setData] = useState([]);
   const [status, setStatus] = useState("idle");
+  const [error, setError] = useState(null);
 
   return (
     <div className="splitter2 gap-top">
