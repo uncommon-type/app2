@@ -17,6 +17,10 @@ const ViewArtistDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    if (!id.length) {
+      return;
+    }
+
     const fetchArtistDetails = async (id) => {
       try {
         const res = await fetch(
