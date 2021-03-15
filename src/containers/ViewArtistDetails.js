@@ -5,6 +5,7 @@ import Spinner from "../components/Spinner";
 import RelatedArtistsList from "../components/RelatedArtistsList";
 import TopTracksList from "../components/TopTracksList";
 import ArtistImage from "../components/ArtistImage";
+import ErrorMessage from "../components/ErrorMessage";
 
 const ViewArtistDetails = () => {
   const [data, setData] = useState([]);
