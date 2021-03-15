@@ -21,6 +21,7 @@ const getRefreshToken = async () => {
 
 exports.handler = async ({ queryStringParameters }) => {
   const { id } = queryStringParameters;
+  const baseURL = "https://api.spotify.com/v1/artists/";
 
   return {
     statusCode: 200,
