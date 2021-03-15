@@ -5,6 +5,7 @@ import { parse } from "query-string";
 import Arrow from "../components/Arrow";
 import SearchResultsTableRow from "../components/SearchResultsTableRow";
 import Spinner from "../components/Spinner";
+import ErrorMessage from "../components/ErrorMessage";
 
 const ViewSearchResults = () => {
   const [data, setData] = useState(null);
