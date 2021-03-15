@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import RelatedArtistsList from "../components/RelatedArtistsList";
 import TopTracksList from "../components/TopTracksList";
 import ArtistImage from "../components/ArtistImage";
