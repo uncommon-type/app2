@@ -52,7 +52,10 @@ const ViewSearchResults = () => {
 
   return isSuccess ? (
     data?.artists?.items?.length ? (
-      <SearchResultsTable />
+      <SearchResultsTable
+        artists={data.artists.items}
+        searchTerm={searchTerm}
+      />
     ) : (
       <ErrorMessage />
     )
