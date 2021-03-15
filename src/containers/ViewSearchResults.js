@@ -57,7 +57,7 @@ const ViewSearchResults = () => {
         searchTerm={searchTerm}
       />
     ) : (
-      <ErrorMessage />
+      <ErrorMessage error={error} />
     )
   ) : null;
 };
