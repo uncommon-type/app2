@@ -50,6 +50,10 @@ const ViewArtistDetails = () => {
     return <Spinner />;
   }
 
+  if (isError) {
+    return <ErrorMessage error={error} />;
+  }
+
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
