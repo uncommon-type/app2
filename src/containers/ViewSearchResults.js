@@ -49,6 +49,10 @@ const ViewSearchResults = () => {
     return <Spinner />;
   }
 
+  if (isError) {
+    return <ErrorMessage error={error} />;
+  }
+
   return (
     <div className="artist-list-view flow radius">
       <h4>Artists with the name of: madonna</h4>
