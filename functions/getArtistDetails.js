@@ -25,6 +25,7 @@ exports.handler = async ({ queryStringParameters }) => {
   const topTracksEndpoint = `${baseURL}${id}/top-tracks?market=US`;
   const relatedArtistsEndpoint = `${baseURL}${id}/related-artists`;
   const artistListEndpoint = `${baseURL}${id}`;
+  const urls = [topTracksEndpoint, relatedArtistsEndpoint, artistListEndpoint];
 
   return {
     statusCode: 200,
