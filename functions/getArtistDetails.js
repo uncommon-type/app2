@@ -23,6 +23,7 @@ exports.handler = async ({ queryStringParameters }) => {
   const { id } = queryStringParameters;
   const baseURL = "https://api.spotify.com/v1/artists/";
   const topTracksEndpoint = `${baseURL}${id}/top-tracks?market=US`;
+  const relatedArtistsEndpoint = `${baseURL}${id}/related-artists`;
 
   return {
     statusCode: 200,
