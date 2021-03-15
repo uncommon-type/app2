@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Arrow from "../components/Arrow";
 import SearchResultsTableRow from "../components/SearchResultsTableRow";
