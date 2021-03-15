@@ -45,6 +45,10 @@ const ViewSearchResults = () => {
     searchArtists(searchTerm);
   }, [searchTerm]);
 
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div className="artist-list-view flow radius">
       <h4>Artists with the name of: madonna</h4>
