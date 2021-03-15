@@ -1,6 +1,12 @@
 import React from "react";
 
-const SearchResultsTableRow = () => (
+const SearchResultsTableRow = ({
+  name,
+  genres,
+  followers,
+  popularity,
+  images,
+}) => (
   <tr>
     <th scope="row">
       <div className="avatar">
