@@ -20,6 +20,10 @@ const ViewSearchResults = () => {
   const { q: searchTerm } = parse(location.search);
 
   useEffect(() => {
+    if (!searchTerm) {
+      return;
+    }
+
     const searchArtists = async (searchTerm) => {
       try {
         const result = await fetch(
