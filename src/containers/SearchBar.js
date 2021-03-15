@@ -1,5 +1,7 @@
 import React, { Fragment, useState } from "react";
 
+import { useHistory } from "react-router-dom";
+
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
 
@@ -8,7 +10,7 @@ const SearchBar = () => {
     setInputValue("");
   };
 
-  const handleSearch = (event) => {
+  const handleOnChange = (event) => {
     setInputValue(event.target.value);
   };
 
@@ -19,7 +21,7 @@ const SearchBar = () => {
         <form onSubmit={handleSearchSubmit} className="search-form">
           <input
             value={inputValue}
-            onChange={handleSearch}
+            onChange={handleOnChange}
             type="text"
             name="q"
             aria-label="Search"
