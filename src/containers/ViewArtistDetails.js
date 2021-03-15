@@ -16,6 +16,21 @@ const ViewArtistDetails = () => {
 
   const { id } = useParams();
 
+  useEffect(() => {
+    const fetchArtistDetails = async (id) => {
+      try {
+        const res = await fetch(
+          `/.netlify/functions/getArtistDetails?id=${id}`
+        );
+
+        const data = await res.json();
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchArtistDetails(id);
+  }, [id]);
+
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
