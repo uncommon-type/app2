@@ -44,6 +44,10 @@ const ViewArtistDetails = () => {
     fetchArtistDetails(id);
   }, [id]);
 
+  if (isLoading) {
+    return <Spinner />;
+  }
+
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
