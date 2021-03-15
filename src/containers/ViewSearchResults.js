@@ -16,6 +16,8 @@ const ViewSearchResults = () => {
 
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
+  const location = useLocation();
+
   return (
     <div className="artist-list-view flow radius">
       <h4>Artists with the name of: madonna</h4>
