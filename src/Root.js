@@ -1,5 +1,7 @@
 import React from "react";
 
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import SearchBar from "./containers/SearchBar";
 import ViewSearchResults from "./containers/ViewSearchResults";
 import ViewArtistDetails from "./containers/ViewArtistDetails";
@@ -12,7 +14,7 @@ const Root = () => {
       </section>
       <section className="app__section wrapper">
         <ViewSearchResults />
-        <ViewArtistDetails />
+        {/* <ViewArtistDetails /> */}
       </section>
     </main>
   );
