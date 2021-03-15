@@ -5,6 +5,8 @@ import ArtistImage from "../components/ArtistImage";
 
 const ViewArtistDetails = () => {
   const [data, setData] = useState([]);
+  const [status, setStatus] = useState("idle");
+
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
