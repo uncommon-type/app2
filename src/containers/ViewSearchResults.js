@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 import Arrow from "../components/Arrow";
 import SearchResultsTableRow from "../components/SearchResultsTableRow";
