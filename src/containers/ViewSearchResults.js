@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { parse } from "query-string";
 
 import Arrow from "../components/Arrow";
 import SearchResultsTableRow from "../components/SearchResultsTableRow";
