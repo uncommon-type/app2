@@ -13,10 +13,12 @@ const Root = () => {
         <section className="app__section">
           <SearchBar />
         </section>
-        <section className="app__section wrapper">
-          <ViewSearchResults />
-          {/* <ViewArtistDetails /> */}
-        </section>
+        <Switch>
+          <section className="app__section wrapper">
+            <ViewSearchResults />
+            {/* <ViewArtistDetails /> */}
+          </section>
+        </Switch>
       </main>
     </Router>
   );
