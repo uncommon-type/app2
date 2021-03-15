@@ -13,20 +13,24 @@ const RelatedArtistsList = ({ relatedArtists }) => (
       <div className="cluster2">
         <div className="related-artists-list">
           {relatedArtists.map((artist) => (
-            <figure className="related-artist">
-              <picture>
-                <img
-                  className="related-artist__avatar"
-                  src={
-                    artist.images.length > 1
-                      ? artist.images[2].url
-                      : "https://placehold.it/220x220"
-                  }
-                  alt={artist.name}
-                />
-              </picture>
-              <figcaption className="image__caption">{artist.name}</figcaption>
-            </figure>
+            <Link key={artist.id} to={`/artist/${artist.id}`}>
+              <figure className="related-artist">
+                <picture>
+                  <img
+                    className="related-artist__avatar"
+                    src={
+                      artist.images.length > 1
+                        ? artist.images[2].url
+                        : "https://placehold.it/220x220"
+                    }
+                    alt={artist.name}
+                  />
+                </picture>
+                <figcaption className="image__caption">
+                  {artist.name}
+                </figcaption>
+              </figure>
+            </Link>
           ))}
         </div>
       </div>
