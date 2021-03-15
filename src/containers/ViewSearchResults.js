@@ -6,6 +6,7 @@ import SearchResultsTableRow from "../components/SearchResultsTableRow";
 const ViewSearchResults = () => {
   const [data, setData] = useState(null);
   const [status, setStatus] = useState("idle");
+  const [error, setError] = useState(null);
 
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
