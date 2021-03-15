@@ -20,7 +20,31 @@ const TopTracksList = ({ tracks }) => {
           </tr>
         </thead>
 
-        <tbody></tbody>
+        <tbody>
+          {tracks.map((track) => {
+            return (
+              <tr key={track.id}>
+                <th scope="row">
+                  <div className="cluster">
+                    <div className="intermediary-wrapper">
+                      <p className="intermediary-wrapper__track">
+                        {track.name}
+                      </p>
+                      <p className="intermediary-wrapper__album font-size:1">
+                        <strong>{track.album.name}</strong>
+                      </p>
+                    </div>
+                  </div>
+
+                  {track.preview_url ? <TopTrackPlayer track={track} /> : null}
+                </th>
+                <td>
+                  <span>{track.popularity}</span>
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
       </table>
     </article>
   );
