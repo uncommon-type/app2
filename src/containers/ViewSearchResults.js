@@ -8,6 +8,10 @@ const ViewSearchResults = () => {
   const [status, setStatus] = useState("idle");
   const [error, setError] = useState(null);
 
+  const isLoading = status === "loading";
+  const isSuccess = status === "success";
+  const isError = status === "error";
+
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
   return (
