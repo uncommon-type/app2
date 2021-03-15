@@ -50,7 +50,13 @@ const ViewSearchResults = () => {
     return <ErrorMessage error={error} />;
   }
 
-  return <div></div>;
+  return isSuccess ? (
+    data?.artists?.items?.length ? (
+      <SearchResultsTable />
+    ) : (
+      <ErrorMessage />
+    )
+  ) : null;
 };
 
 export default ViewSearchResults;
