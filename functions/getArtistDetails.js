@@ -27,6 +27,10 @@ exports.handler = async ({ queryStringParameters }) => {
   const artistListEndpoint = `${baseURL}${id}`;
   const urls = [topTracksEndpoint, relatedArtistsEndpoint, artistListEndpoint];
 
+  if (!process.env.REFRESH_TOKEN) {
+    process.env.REFRESH_TOKEN = await getRefreshToken();
+  }
+
   return {
     statusCode: 200,
     body: "",
