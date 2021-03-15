@@ -2,7 +2,7 @@ import React from "react";
 
 import TopTrackPlayer from "./TopTrackPlayer";
 
-const TopTracksList = () => {
+const TopTracksList = ({ tracks }) => {
   const headers = ["track", "popularity"];
   return (
     <article className="tracks-infogroup flow radius bg-primary color-light">
