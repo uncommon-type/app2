@@ -16,10 +16,12 @@ const SearchBar = () => {
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     setInputValue("");
+    updateURL(inputValue);
   };
 
   const handleOnChange = (event) => {
     setInputValue(event.target.value);
+    updateURL(event.target.value);
   };
 
   return (
