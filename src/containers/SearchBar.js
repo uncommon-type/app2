@@ -7,6 +7,12 @@ const SearchBar = () => {
 
   const history = useHistory();
 
+  const updateURL = (query) => {
+    if (query) {
+      history.push(`/search/?q=${query}`);
+    }
+  };
+
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     setInputValue("");
