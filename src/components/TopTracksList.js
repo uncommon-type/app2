@@ -1,6 +1,6 @@
 import React from "react";
 
-import TopTrack from "./TopTrack";
+import TopTrackPlayer from "./TopTrackPlayer";
 
 const TopTracksList = () => {
   const headers = ["track", "popularity"];
@@ -20,9 +20,7 @@ const TopTracksList = () => {
           </tr>
         </thead>
 
-        <tbody>
-          <TopTrack />
-        </tbody>
+        <tbody></tbody>
       </table>
     </article>
   );
