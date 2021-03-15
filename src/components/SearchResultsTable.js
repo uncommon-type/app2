@@ -35,7 +35,21 @@ const SearchResultsTable = ({ artists, searchTerm }) => {
           </tr>
         </thead>
 
-        <tbody></tbody>
+        <tbody>
+          {artists.map(
+            ({ id, name, genres, followers, popularity, images }) => (
+              <SearchResultsTableRow
+                key={id}
+                name={name}
+                genres={genres}
+                followers={followers}
+                popularity={popularity}
+                images={images}
+                id={id}
+              />
+            )
+          )}
+        </tbody>
       </table>
     </div>
   );
