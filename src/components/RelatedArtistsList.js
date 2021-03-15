@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 
-const RelatedArtistsList = () => (
+const RelatedArtistsList = ({ relatedArtists }) => (
   <Fragment>
     <h4
       className="info__item__header text-500 related-artists-header"
