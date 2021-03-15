@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+
 import RelatedArtistsList from "../components/RelatedArtistsList";
 import TopTracksList from "../components/TopTracksList";
 import ArtistImage from "../components/ArtistImage";
