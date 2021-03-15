@@ -4,6 +4,7 @@ import TopTracksList from "../components/TopTracksList";
 import ArtistImage from "../components/ArtistImage";
 
 const ViewArtistDetails = () => {
+  const [data, setData] = useState([]);
   return (
     <div className="splitter2 gap-top">
       <article className="artist-infogroup flow radius">
