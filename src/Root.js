@@ -19,6 +19,9 @@ const Root = () => (
             <ViewSearchResults />
           </section>
         </Route>
+        <Route path="/artist/:id">
+          <ViewArtistDetails />
+        </Route>
       </Switch>
     </main>
   </Router>
