@@ -12,21 +12,26 @@ const SearchResultsTableRow = ({
       <div className="avatar">
         <figure className="avatar__img aspect-ratio-square">
           <img
-            src="https://i.scdn.co/image/96b4818a65820e91e0e17fcf55a4d2213b019ad4"
-            alt="Madonna"
+            src={
+              (images && images[0] && images[0].url) ||
+              "https://placehold.it/160x160"
+            }
+            alt={name}
           />
         </figure>
-        <p>Madonna</p>
+        <p>{name}</p>
       </div>
     </th>
     <td>
-      <span className="pill radius bg-tertiary color-light">dance pop,pop</span>
+      <span className="pill radius bg-tertiary color-light">
+        {genres.length === 0 ? "N/A" : genres.slice(0, 2).join(", ")}
+      </span>
     </td>
     <td>
-      <span>4855035</span>
+      <span>{followers.total}</span>
     </td>
     <td>
-      <span>81</span>
+      <span>{popularity}</span>
     </td>
   </tr>
 );
