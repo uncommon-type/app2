@@ -5,6 +5,8 @@ import { useHistory } from "react-router-dom";
 const SearchBar = () => {
   const [inputValue, setInputValue] = useState("");
 
+  const history = useHistory();
+
   const handleSearchSubmit = (event) => {
     event.preventDefault();
     setInputValue("");
