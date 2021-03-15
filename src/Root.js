@@ -14,6 +14,7 @@ const Root = () => {
           <SearchBar />
         </section>
         <Switch>
+          <Route exact path="/" />
           <section className="app__section wrapper">
             <ViewSearchResults />
             {/* <ViewArtistDetails /> */}
