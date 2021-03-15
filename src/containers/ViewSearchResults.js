@@ -4,6 +4,7 @@ import { parse } from "query-string";
 
 import Arrow from "../components/Arrow";
 import SearchResultsTableRow from "../components/SearchResultsTableRow";
+import Spinner from "../components/Spinner";
 
 const ViewSearchResults = () => {
   const [data, setData] = useState(null);
