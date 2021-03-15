@@ -43,6 +43,21 @@ exports.handler = async ({ queryStringParameters }) => {
         return artistResponse.json();
       })
     );
+
+    if (fetchedInfo.error && fetchedInfo.error.status === 401) {
+      process.env.REFRESH_TOKEN = await getRefreshToken();
+      fetchedInfo = await Promise.all(
+        urls.map(async (url) => {
+          const artistResponse = await fetch(url, {
+            method: "GET",
+            headers: {
+              Authorization: `Bearer ${process.env.REFRESH_TOKEN}`,
+            },
+          });
+          return artistResponse.json();
+        })
+      );
+    }
   } catch (error) {
     console.error(error);
   }
