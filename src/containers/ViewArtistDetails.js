@@ -21,6 +21,8 @@ const ViewArtistDetails = () => {
       return;
     }
 
+    setStatus("loading");
+
     const fetchArtistDetails = async (id) => {
       try {
         const res = await fetch(
