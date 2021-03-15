@@ -24,6 +24,8 @@ const ViewSearchResults = () => {
       return;
     }
 
+    setStatus("loading");
+
     const searchArtists = async (searchTerm) => {
       try {
         const result = await fetch(
