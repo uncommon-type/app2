@@ -30,8 +30,15 @@ const ViewArtistDetails = () => {
         );
 
         const data = await res.json();
+        if (data[0]?.error) {
+          throw new Error(data[0].error.message);
+        }
+        setData(data);
+        setStatus("success");
       } catch (error) {
         console.error(error);
+        setError(error);
+        setStatus("error");
       }
     };
     fetchArtistDetails(id);
