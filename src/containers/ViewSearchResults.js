@@ -19,6 +19,20 @@ const ViewSearchResults = () => {
   const location = useLocation();
   const { q: searchTerm } = parse(location.search);
 
+  useEffect(() => {
+    const searchArtists = async (searchTerm) => {
+      try {
+        const result = await fetch(
+          `/.netlify/functions/search?artist=${encodeURIComponent(searchTerm)}`
+        );
+        const data = await result.json();
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    searchArtists(searchTerm);
+  }, [searchTerm]);
+
   return (
     <div className="artist-list-view flow radius">
       <h4>Artists with the name of: madonna</h4>
