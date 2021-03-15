@@ -8,15 +8,17 @@ import ViewArtistDetails from "./containers/ViewArtistDetails";
 
 const Root = () => {
   return (
-    <main className="app">
-      <section className="app__section">
-        <SearchBar />
-      </section>
-      <section className="app__section wrapper">
-        <ViewSearchResults />
-        {/* <ViewArtistDetails /> */}
-      </section>
-    </main>
+    <Router>
+      <main className="app">
+        <section className="app__section">
+          <SearchBar />
+        </section>
+        <section className="app__section wrapper">
+          <ViewSearchResults />
+          {/* <ViewArtistDetails /> */}
+        </section>
+      </main>
+    </Router>
   );
 };
 
