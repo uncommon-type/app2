@@ -23,6 +23,7 @@ const Root = () => (
         <Route path="/artist/:id">
           <ViewArtistDetails />
         </Route>
+        <Route component={ViewNotFound} />
       </Switch>
     </main>
   </Router>
