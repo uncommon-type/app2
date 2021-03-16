@@ -6,7 +6,10 @@ const NotFoundView = () => {
   return (
     <div className="not-found-view">
       <div>
-        Sorry... nothing here. <Link to="/">Go Home</Link>
+        Sorry... nothing here.
+        <Link to="/">
+          Go <strong>Home</strong>
+        </Link>
       </div>
     </div>
   );
