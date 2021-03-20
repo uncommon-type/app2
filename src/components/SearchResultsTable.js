@@ -8,6 +8,11 @@ const SearchResultsTable = ({ artists, searchTerm }) => {
     isDescending: true,
   });
 
+  const handleSort = () => {
+    const isDescending = !sort.isDescending;
+    setSort({ isDescending });
+  };
+
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
   return (
