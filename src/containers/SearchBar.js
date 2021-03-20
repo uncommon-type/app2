@@ -19,13 +19,17 @@ const SearchBar = () => {
     setInputValue("");
   };
 
+  const handleOnChange = (event) => {
+    setInputValue(event.currentTarget.value);
+  };
+
   return (
     <section className="app__section">
       <h3>Search for an Artist</h3>
       <div className="section__form splitter">
         <form id="search-form" onSubmit={handleSearchSubmit}>
           <input
-            onChange={handleSearch}
+            onChange={handleOnChange}
             value={inputValue}
             type="text"
             name="q"
