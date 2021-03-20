@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 
 import { useHistory } from "react-router-dom";
 
@@ -15,23 +15,17 @@ const SearchBar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    setInputValue("");
-    updateURL(inputValue);
-  };
-
-  const handleOnChange = (event) => {
-    setInputValue(event.target.value);
-    updateURL(event.target.value);
+    setInputValue(event.target.elements.artistSearch.value);
+    updateURL(event.target.elements.artistSearch.value);
   };
 
   return (
-    <Fragment>
+    <section className="app__section">
       <h3>Search for an Artist</h3>
       <div className="section__form splitter">
-        <form onSubmit={handleSearchSubmit} className="search-form">
+        <form id="search-form" onSubmit={handleSearchSubmit}>
           <input
-            value={inputValue}
-            onChange={handleOnChange}
+            onChange={handleSearch}
             type="text"
             name="q"
             aria-label="Search"
@@ -40,7 +34,7 @@ const SearchBar = () => {
           <button type="submit">Search</button>
         </form>
       </div>
-    </Fragment>
+    </section>
   );
 };
 
