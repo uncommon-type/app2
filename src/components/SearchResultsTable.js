@@ -53,7 +53,7 @@ const SearchResultsTable = ({ artists, searchTerm }) => {
         </thead>
 
         <tbody>
-          {artists.map(
+          {sortedList.map(
             ({ id, name, genres, followers, popularity, images }) => (
               <SearchResultsTableRow
                 key={id}
