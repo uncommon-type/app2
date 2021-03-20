@@ -56,11 +56,8 @@ const ViewSearchResults = () => {
   }
 
   return isSuccess ? (
-    data?.artists?.items?.length ? (
-      <SearchResultsTable
-        artists={data.artists.items}
-        searchTerm={searchTerm}
-      />
+    data?.length ? (
+      <SearchResultsTable artists={data} searchTerm={searchTerm} />
     ) : (
       <ErrorMessage error={error} />
     )
