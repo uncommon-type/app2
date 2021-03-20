@@ -4,6 +4,10 @@ import SearchResultsTableRow from "../components/SearchResultsTableRow";
 import Arrow from "../components/Arrow";
 
 const SearchResultsTable = ({ artists, searchTerm }) => {
+  const [sort, setSort] = useState({
+    isDescending: true,
+  });
+
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
   return (
