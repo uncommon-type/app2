@@ -24,7 +24,7 @@ const SearchBar = () => {
   };
 
   return (
-   
+    <Fragment>
       <h3>Search for an Artist</h3>
       <div className="section__form splitter">
         <form id="search-form" onSubmit={handleSearchSubmit}>
@@ -39,7 +39,7 @@ const SearchBar = () => {
           <button type="submit">Search</button>
         </form>
       </div>
-  
+    </Fragment>
   );
 };
 
