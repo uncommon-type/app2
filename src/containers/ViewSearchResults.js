@@ -30,7 +30,12 @@ const ViewSearchResults = () => {
         const result = await fetch(
           `/.netlify/functions/search?artist=${encodeURIComponent(searchTerm)}`
         );
-        const data = await result.json();
+        let data = await result.json();
+
+        data = data.artists.items.filter(
+          (artist) => artist.images.length && artist.genres.length
+        );
+
         setData(data);
         setStatus("success");
       } catch (error) {
