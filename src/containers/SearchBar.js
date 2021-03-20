@@ -26,6 +26,7 @@ const SearchBar = () => {
         <form id="search-form" onSubmit={handleSearchSubmit}>
           <input
             onChange={handleSearch}
+            value={inputValue}
             type="text"
             name="q"
             aria-label="Search"
