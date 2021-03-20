@@ -39,8 +39,8 @@ const SearchResultsTable = ({ artists, searchTerm }) => {
                   className="popularity-col"
                 >
                   {header}
-                  <button className="sorting-button">
-                    <Arrow />
+                  <button onClick={handleSort} className="sorting-button">
+                    <Arrow sortDir={sort.isDescending} />
                   </button>
                 </th>
               ) : (
