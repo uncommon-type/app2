@@ -15,8 +15,8 @@ const SearchBar = () => {
 
   const handleSearchSubmit = (event) => {
     event.preventDefault();
-    setInputValue(event.target.elements.artistSearch.value);
     updateURL(event.target.elements.artistSearch.value);
+    setInputValue("");
   };
 
   return (
