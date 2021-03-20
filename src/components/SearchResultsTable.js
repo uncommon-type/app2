@@ -13,6 +13,14 @@ const SearchResultsTable = ({ artists, searchTerm }) => {
     setSort({ isDescending });
   };
 
+  const sortedList = sort.isDescending
+    ? [...artists].sort((a, b) => {
+        return b.popularity - a.popularity;
+      })
+    : [...artists].sort((a, b) => {
+        return a.popularity - b.popularity;
+      });
+
   const tableHeaders = ["name", "genre", "followers", "popularity"];
 
   return (
