@@ -734,6 +734,20 @@ figcaption > * + * {
   margin-top: 0.75rem;
 }
 
+@media (min-width: 48em) {
+  .splitter2 {
+    display: flex;
+  }
+  .splitter2 > * {
+    flex-grow: 1;
+  }
+  .splitter2 > :last-child {
+    margin-top: 0;
+    min-width: calc(66.666% - var(--s1));
+    max-width: calc(66.666% - var(--s1));
+  }
+}
+
 .spinner-container {
   display: flex;
   flex-direction: column;
