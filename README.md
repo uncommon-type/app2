@@ -2,8 +2,6 @@
 
 App to simplify music discovery process
 
-
-
 <img src="https://github.com/uncommon-type/music-discovery-tool/assets/74302233/2e475f2e-1573-4c89-8b3b-a7b9099d17f9" width="660">
 <br/>
 <br/>
@@ -16,14 +14,10 @@ App to simplify music discovery process
 <br/>
 <br/>
 
-
-
-
-
 ## Built With 
 
 -  React
--  HTML/CSS
+-  CSS
 -  Spotify API
 -  Netlify serverless functions
 
